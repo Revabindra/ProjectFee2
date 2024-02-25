@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+     <div class="main">
+        <div class="box">
+            <img width="40" height="40" src="https://img.icons8.com/color/100/apple-music.png" alt="apple-music"/>
+            <form action="#">
+                <div class="input-box"  >
+                    <span class="icon" ></span>
+                    <input type="email" >
+                    <label>Email address</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="Password" >
+                    <label>Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="up">
+                    <button type="submit" class="btn" onclick="openPopup()" >Login</button>
+                    <div class="popup" id="popup">
+                        <!-- <img src="404-tick.png" alt="img"> -->
+                        <img width="40" height="40" src="https://img.icons8.com/nolan/40/checked-2.png" alt="checked-2"/>
+                        <!-- <img width="32" height="32" src="https://img.icons8.com/windows/32/checked-2.png" alt="checked-2"/> -->
+                        <h2>Thank You!</h2>
+                        <p>You have successfully done the registration. Thanks!</p>
+                        <button type="button" onclick="closePopup()">OK</button>
+                    </div>
+                </div>
+            <h4> or login with</h4>
+            <div class="sign"><a href="https://accounts.google.co.in/"> <button class="btn" id="g"><img width="25" height="25" src="https://img.icons8.com/fluency/48/google-logo.png" alt="google-logo"/><span> Sign in with Google</span></button></a></div>
+            <div class="sign2"> <a href="https://www.facebook.com/login/"><button class="btn" id="f"><img width="25" height="25" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new"/><span>Login with Facebook</span></button></a></div>
+            <div class="sign3"><a href="https://accounts.spotify.com/en/login"><button class="btn" id="s"><img width="25" height="25" src="https://img.icons8.com/fluency/48/spotify.png"/><span>Login with Spotify</span></button></a></div>
+            </form>
+        </div>
+        </div>
+        <script>
+            // let blurContainer = document.getElementById("blur-container");
+            let popup = document.getElementById("popup");
+            function openPopup(){
+                popup.style.visibility = "visible";
+                popup.style.top = "50%";
+                popup.style.transform = "translate(-50%,-50%) scale(1)";
+                // document.classList.add('blur'); // Apply blur only to the background
+            }
+        
+            function closePopup(){
+                popup.style.visibility = "hidden";
+                popup.style.top = "0";
+                popup.style.transform = "translate(-50%,-50%) scale(0.1)";
+                // document.classList.remove('blur'); // Remove blur from the background
+            }
+        </script>
+
+</body>
+</html> 
